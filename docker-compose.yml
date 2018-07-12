@@ -2,7 +2,6 @@ version: '2'
 services:
   php:
     build: ./docker/php
-    container_name: standard_php
     volumes:
      - .:/var/www
     links:
@@ -12,14 +11,8 @@ services:
       - MYSQL_USER=homestead
       - MYSQL_PASSWORD=secret
       - MYSQL_ROOT_PASSWORD=password
-  redis:
-    container_name: standard_redis
-    image: 'redis:3.2-alpine'
-    links:
-      - php
   nginx:
     build: ./docker/nginx
-    container_name: standard_nginx
     ports:
      - "80:80"
     volumes:
@@ -32,7 +25,6 @@ services:
     ports:
      - "33060:3306"
     image: 'percona:5.7'
-    container_name: standard_mysql
     volumes:
       - ./storage/mysql:/var/lib/mysql
     environment:
