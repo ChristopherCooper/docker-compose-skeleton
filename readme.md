@@ -22,13 +22,13 @@ Wait for the downloads to complete.
  - Wait for docker to download, go make a cuppa if your on the wifi.
  - Install and run docker, login using your username and password created above.
 
-#### Install Laravel - https://laravel.com/docs/5.6
+#### 4 Install Laravel - https://laravel.com/docs/5.6
 
 - In terminal cd into the directory you want to install laravel into. In my case this was the following.
  ``` cd PhpstormProjects/ ```
  ``` composer create-project --prefer-dist laravel/laravel DevelopmentSite ```
 
-##### Dockerise the Laravel Installation
+##### 4.1 Dockerise the Laravel Installation
 - Get local copy of Cooper skeleton builder - Download zip to Documents - https://github.com/ChristopherCooper/docker-compose-skeleton.git
 - Copy the contents of unzipped contents to your DevelopmentSite folder. The folder should be located somewhere like. ```/Users/nameofuser/PhpstormProjects/DevelopmentSite```
 - Close PHP storm completely.
